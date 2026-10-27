@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(78, 111, 113);
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main h2{
+   color: rgb(247, 247, 18);
+    
+}
+
+#link{
+    color: aqua;
+}
+
+ p{
+  margin-left: 100px;  
+}

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <head>
+      <h1 style="color: yellow; font-size: 50px">Jeeva A</h1>
+      <hr />
+      <div style="font-size: 24px">
+        <p style=""><strong>9940430875 | jeeva23@gmail</strong></p>
+        <p>
+          <strong>Github: </strong>
+          <a href="" id="link"> www.jeevadev.github.com </a>
+        </p>
+        <p>
+          <strong>Linkdin: </strong>
+          <a href="" id="link">www.jeevadev.linkdin </a>
+        </p>
+      </div>
+    </head>
+
+    <main style="font-size: 30px" class="main">
+      <h2 style="line-height: 10px">Carrer Objective</h2>
+      <p>
+        To obtain an entry-level position in a reputed organization where I can
+        apply my technical <br />
+        knowledge, enhance my programming skills, learn new technologies, and
+        contribute to the <br />
+        growth of the organization while developing my professional career.
+      </p>
+
+      <h2 style="line-height: 10px">Education</h2>
+      <p>B.Tech Information Technology</p>
+      <p style="line-height: 3px; margin-top: -10px">
+        S.A Engineering College,chennai|2023-2027 CGPA:8.30/10
+      </p>
+      <p style="line-height: 16px">
+        Relevant courses: Data Structure,Algorithms,DBMS,OOP
+      </p>
+
+      <h2 style="line-height: 10px">Technical Skills</h2>
+      <p>Programming Languages: Java(basic), Python(basic)</p>
+      <p style="line-height: 3px; margin-top: -10px">
+        Web Development: HTML, CSS, JavaScript,Node JS
+      </p>
+      <p style="line-height: 16px">Database: MongoDB (basic)</p>
+      <p style="line-height: 16px; margin-top: -10px">
+        Tools & Platforms: VS Code,Figma,AWS Cloud,GitHuB,Android Studio,Docker
+      </p>
+      <p style="line-height: 16px; margin-top: -10px">
+        Core Concepts: OOP, DBMS, Data Structure,Networking.Cloud Computing.
+      </p>
+
+      <h2 style="line-height: 10px">Academic Work & Mini Task</h2>
+      <p>Event coordinator – Pixel Craft(UI/UX Design) Symposium</p>
+      <p style="line-height: 3px; margin-top: -10px">
+        Created a simple E-commerce Website using HTML ,CSS & Basic JavaScript
+      </p>
+      <p style="line-height: 16px">
+        Architecture of a Cloud-Enabled Learning, Attendance & Assessment
+        System(In Progress)
+      </p>
+
+      <h2 style="line-height: 10px">Internship</h2>
+      <p>Cloud Computing Internship - <b>Eagle Tech Company</b></p>
+      <p style="margin-top: -14px; margin-top: -25px">
+        Completed a Cloud Computing internship at Eagle Tech, where I gained
+        practical knowledge <br />
+        of cloud technologies and deployment concepts. Worked on basic
+        cloud-based tasks and learned <br />
+        virtualization, Docker, and cloud architecture. This internship enhanced
+        my technical, problem <br />
+        solving, and teamwork skills.
+      </p>
+
+      <h2 style="line-height: 10px">Certifications</h2>
+      <p>Full Stack Development– Simplilearning (2025)</p>
+      <p style="line-height: 3px; margin-top: -10px">Java – NPTEL (2024)</p>
+      <p style="line-height: 16px">
+        Typewriting – {2024} 1st class with distinction
+      </p>
+
+      <h2 style="line-height: 10px">Achievements</h2>
+      <p>Participated in [ Inter College Hackathon]</p>
+    </main>
+
+    <h2>Counter : <span id="count">0</span></h2>
+    <button onclick="Increment()">Increment +</button>
+    <button onclick="Decrement()">Decrement -</button>
+    <button onclick="Multiplication()">Multiplication</button>
+    <button onclick="Division()">Division</button>
+    <button onclick="Reset()">Reset</button>
+
+    <script>
+      let count = 0;
+
+      function Increment() {
+        count++;
+        document.getElementById("count").innerText = count;
+      }
+
+      function Decrement() {
+        count--;
+        document.getElementById("count").innerText = count;
+      }
+
+      function Multiplication() {
+        count = count * 2;
+        document.getElementById("count").innerText = count;
+      }
+
+      function Division() {
+        count = count / 2;
+        document.getElementById("count").innerText = count;
+      }
+
+      function Reset() {
+        count = 0;
+        document.getElementById("count").innerText = count;
+      }
+    </script>
+  </body>
+</html>
