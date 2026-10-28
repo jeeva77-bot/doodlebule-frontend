@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>JavaScript counter</title>
+    </head>
+    <body>
+        <h2> Counter: <span id = "count">0</span></h2>
+
+
+        <button onclick="add()">Addition +</button>
+        <button onclick="subtract()">Subtraction -</button>
+        <button onclick="multiply()">Multiplication *</button>
+        <button onclick="divide()">Division /</button>
+        <button onclick="reset()">Reset</button>
+        
+
+        <script>
+            
+            let count = 0;
+            const btnadd = document.getElementById("add");
+            function add(){
+                count++;
+                document.getElementById("count").innerText = count;
+                
+            }
+            btnadd.addEventListener("click", add);
+            
+
+            const btnSubtract = document.getElementById("subtract");
+            function subtract(){
+                count--;
+                document.getElementById("count").innerText = count;
+            }
+            btnSubtract.addEventListener("click", subtract);
+
+            const btnMultiply = document.getElementById("multiply");
+            function multiply(){
+                count *= 2;
+                document.getElementById("count").innerText = count;
+            }
+            btnMultiply.addEventListener("click", multiply);
+
+            const btnDivide = document.getElementById("divide");
+            function divide(){
+                count /= 2;
+                document.getElementById("count").innerText = count;
+            }
+            btnDivide.addEventListener("click", divide);
+
+            const btnReset = document.getElementById("reset");
+            function reset(){
+                count = 0;
+                document.getElementById("count").innerText = count;
+                alert("Counter has been reset to 0");
+            }
+            btnReset.addEventListener("click", reset);
+
+        </script>
+    </body>
+</html>
