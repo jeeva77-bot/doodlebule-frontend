@@ -1,127 +1,169 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <head>
-      <h1 style="color: yellow; font-size: 50px">Jeeva A</h1>
-      <hr />
-      <div style="font-size: 24px">
-        <p><strong>9940430875 | jeeva23@gmail</strong></p>
-        <p>
-          <strong>Github: </strong>
-          <a href="" id="link"> www.jeevadev.github.com </a>
-        </p>
-        <p>
-          <strong>Linkdin: </strong>
-          <a href="" id="link">www.jeevadev.linkdin </a>
-        </p>
-      </div>
-    </head>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      color: #222;
+    }
+    h1 {
+      color: #2563eb;
+      font-size: 60px;
+      position: relative;
+      top: 60px;
+    
 
-    <main style="font-size: 30px" class="main">
-      <h2 style="line-height: 10px">Carrer Objective</h2>
-      <p>
-        To obtain an entry-level position in a reputed organization where I can
-        apply my technical <br />
-        knowledge, enhance my programming skills, learn new technologies, and
-        contribute to the <br />
-        growth of the organization while developing my professional career.
-      </p>
+    }
 
-      <h2 style="line-height: 10px">Education</h2>
-      <p>B.Tech Information Technology</p>
-      <p style="line-height: 3px; margin-top: -10px">
-        S.A Engineering College,chennai|2023-2027 CGPA:8.30/10
-      </p>
-      <p style="line-height: 16px">
-        Relevant courses: Data Structure,Algorithms,DBMS,OOP
-      </p>
+    h2 {
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 5px;
+      margin-top: 25px;
+    }
+    p, li {
+      font-size: 26px;
+      line-height: 1.6;
+    }
+    a {
+      color: #2563eb;
+    }
+    img{
+     width: 250px;
+     height: 250px;
+      border-radius: 50%; 
+      object-fit: cover;
+      margin-left: 2600px;
+      margin-top: -130px;
+      
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="name"></h1>
+    <img src="photo.jpeg" alt="">
+    <hr>
+    <p id="contact"></p>
+    <p id="github"></p>
+    <p id="linkedin"></p>
+  </header>
 
-      <h2 style="line-height: 10px">Technical Skills</h2>
-      <p>Programming Languages: Java(basic), Python(basic)</p>
-      <p style="line-height: 3px; margin-top: -10px">
-        Web Development: HTML, CSS, JavaScript,Node JS
-      </p>
-      <p style="line-height: 16px">Database: MongoDB (basic)</p>
-      <p style="line-height: 16px; margin-top: -10px">
-        Tools & Platforms: VS Code,Figma,AWS Cloud,GitHuB,Android Studio,Docker
-      </p>
-      <p style="line-height: 16px; margin-top: -10px">
-        Core Concepts: OOP, DBMS, Data Structure,Networking.Cloud Computing.
-      </p>
+  <main>
+    <h2>Career Objective</h2>
+    <p id="objective" ></p>
 
-      <h2 style="line-height: 10px">Academic Work & Mini Task</h2>
-      <p>Event coordinator – Pixel Craft(UI/UX Design) Symposium</p>
-      <p style="line-height: 3px; margin-top: -10px">
-        Created a simple E-commerce Website using HTML ,CSS & Basic JavaScript
-      </p>
-      <p style="line-height: 16px">
-        Architecture of a Cloud-Enabled Learning, Attendance & Assessment
-        System(In Progress)
-      </p>
+    <h2>Education</h2>
+    <ul id="education"></ul>
 
-      <h2 style="line-height: 10px">Internship</h2>
-      <p>Cloud Computing Internship - <b>Eagle Tech Company</b></p>
-      <p style="margin-top: -14px; margin-top: -25px">
-        Completed a Cloud Computing internship at Eagle Tech, where I gained
-        practical knowledge <br />
-        of cloud technologies and deployment concepts. Worked on basic
-        cloud-based tasks and learned <br />
-        virtualization, Docker, and cloud architecture. This internship enhanced
-        my technical, problem <br />
-        solving, and teamwork skills.
-      </p>
+    <h2>Technical Skills</h2>
+    <ul id="skills"></ul>
 
-      <h2 style="line-height: 10px">Certifications</h2>
-      <p>Full Stack Development– Simplilearning (2025)</p>
-      <p style="line-height: 3px; margin-top: -10px">Java – NPTEL (2024)</p>
-      <p style="line-height: 16px">
-        Typewriting – {2024} 1st class with distinction
-      </p>
+    <h2>Academic Work & Mini Task</h2>
+    <ul id="projects"></ul>
 
-      <h2 style="line-height: 10px">Achievements</h2>
-      <p>Participated in [ Inter College Hackathon]</p>
-    </main>
+    <h2>Internship</h2>
+    <ul id="internship"></ul>
 
-    <h2>Counter : <span id="count">0</span></h2>
-    <button onclick="Increment()">Increment +</button>
-    <button onclick="Decrement()">Decrement -</button>
-    <button onclick="Multiplication()">Multiplication</button>
-    <button onclick="Division()">Division</button>
-    <button onclick="Reset()">Reset</button>
+    <h2>Certifications</h2>
+    <ul id="certifications"></ul>
 
-    <script>
-      let count = 0;
+    <h2>Achievements</h2>
+    <ul id="achievements"></ul>
+  </main>
 
-      function Increment() {
-        count++;
-        document.getElementById("count").innerText = count;
-      }
+  <script>
+    const userData = {
+      name: "Jeeva A",
+      phone: "9940430875",
+      email: "jeeva23@gmail.com",
+      github: "https://github.com/jeevadev",
+      linkedin: "https://www.linkedin.com/",
+      objective: "To obtain an entry-level position in a reputed organization where I can apply my technical knowledge, enhance my programming skills, learn new technologies, and contribute to the growth of the organization while developing my professional career.",
 
-      function Decrement() {
-        count--;
-        document.getElementById("count").innerText = count;
-      }
+      education: [
+        "B.Tech Information Technology",
+        "S.A Engineering College, Chennai | 2023-2027 | CGPA: 8.30/10",
+        "Relevant Courses: Data Structures, Algorithms, DBMS, OOP"
+      ],
 
-      function Multiplication() {
-        count = count * 2;
-        document.getElementById("count").innerText = count;
-      }
+      skills: [
+        "Programming Languages: Java (Basic), Python (Basic)",
+        "Web Development: HTML, CSS, JavaScript, Node.js",
+        "Database: MongoDB (Basic)",
+        "Tools & Platforms: VS Code, Figma, AWS Cloud, GitHub, Android Studio, Docker",
+        "Core Concepts: OOP, DBMS, Data Structures, Networking, Cloud Computing"
+      ],
 
-      function Division() {
-        count = count / 2;
-        document.getElementById("count").innerText = count;
-      }
+      projects: [
+        {
+          title: "Event Coordinator",
+          description: "Pixel Craft (UI/UX Design) Symposium"
+        },
+        {
+          title: "E-commerce Website",
+          description: "Created a simple e-commerce website using HTML, CSS and basic JavaScript"
+        },
+        {
+          title: "Cloud-Enabled Learning System",
+          description: "Architecture of a Cloud-Enabled Learning, Attendance & Assessment System (In Progress)"
+        }
+      ],
 
-      function Reset() {
-        count = 0;
-        document.getElementById("count").innerText = count;
-      }
-    </script>
-  </body>
+      internship: [
+        {
+          title: "Cloud Computing Internship - Eagle Tech Company",
+          description: "Gained practical knowledge of cloud technologies, deployment concepts, virtualization, Docker and cloud architecture. Enhanced technical, problem-solving and teamwork skills."
+        }
+      ],
+
+      certifications: [
+        "Full Stack Development - Simplilearning (2025)",
+        "Java - NPTEL (2024)",
+        "Typewriting - 2024, First Class with Distinction"
+      ],
+
+      achievements: [
+        "Participated in an Inter-College Hackathon"
+      ]
+    };
+
+    document.getElementById("name").innerText = userData.name;
+    document.getElementById("contact").innerHTML =
+      `<strong>Phone:</strong> ${userData.phone} | <strong>Email:</strong> ${userData.email}`;
+
+    document.getElementById("github").innerHTML =
+      `<strong>GitHub:</strong> <a href="${userData.github}">${userData.github}</a>`;
+
+    document.getElementById("linkedin").innerHTML =
+      `<strong>LinkedIn:</strong> <a href="${userData.linkedin}">LinkedIn Profile</a>`;
+
+    document.getElementById("objective").innerText = userData.objective;
+
+    document.getElementById("education").innerHTML =
+      userData.education.map(item => `<li>${item}</li>`).join("");
+
+    document.getElementById("skills").innerHTML =
+      userData.skills.map(skill => `<li>${skill}</li>`).join("");
+
+    document.getElementById("projects").innerHTML =
+      userData.projects.map(project =>
+        `<li><strong>${project.title}</strong> - ${project.description}</li>`
+      ).join("");
+
+    document.getElementById("internship").innerHTML =
+      userData.internship.map(item =>
+        `<li><strong>${item.title}</strong><p>${item.description}</p></li>`
+      ).join("");
+
+    document.getElementById("certifications").innerHTML =
+      userData.certifications.map(item => `<li>${item}</li>`).join("");
+
+    document.getElementById("achievements").innerHTML =
+      userData.achievements.map(item => `<li>${item}</li>`).join("");
+  </script>
+</body>
 </html>
